@@ -1,0 +1,19 @@
+<div class="slide-bar" [ngStyle]="{'width': barWidthStr}">
+
+    <div #line class="line" [ngStyle]="{'width': lineWidthStr}">
+        <div class="filled-line" [ngStyle]="{'width': filledLineWidthStr}"></div>
+        <div class="circle-pos" [ngStyle]="{'transform': translateStr}" >
+            <div 
+                class="circle" 
+                (mousedown)="onMouseDown()"
+                >
+            </div>
+        </div>
+    </div>
+</div>
+<canvas *ngIf="isMouseDown"
+    class="interact-layer" 
+    (mousemove)="onMouseMove($event)"
+    (mouseup)="onMouseUp()"
+    >
+</canvas>

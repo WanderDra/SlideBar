@@ -1,0 +1,11 @@
+<label for="slider">Resize</label>
+<div class="container" name="slider">
+    <app-slide-bar 
+        class="slide-bar" 
+        [lineWidth]="300" 
+        [min]="min" [max]="max"
+        [(value)]="value">
+    </app-slide-bar>
+    <input class="value-input" type="number" [(ngModel)]="value">
+</div>
+<img src="./assets/test.jpg" [ngStyle]="{'width': imgWidthStr}">
